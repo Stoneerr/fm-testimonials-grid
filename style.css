@@ -1,0 +1,151 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+:root {
+	/* Primary */
+	--Pry-Violet: hsl(263, 55%, 52%);
+	--Pry-DkGrayBlue: hsl(217, 19%, 35%);
+	--Pry-DkBlackBlue: hsl(219, 29%, 14%);
+
+	/* Neutral */
+	--Neu-LtGray: hsl(0, 0%, 81%);
+	--Neu-LtGrayBlue: hsl(210, 46%, 95%);
+
+	/* Verified = PersonColor (50% opacity) */
+	/* Paragraphs = SameColor (70% opacity) */
+}
+
+/* --- Defaults --- */
+body {
+	font-family: "Barlow Semi Condensed", sans-serif;
+	font-size: 13px;
+	background: var(--Neu-LtGrayBlue);
+}
+
+h4,
+h5 {
+	font-weight: 500;
+}
+
+/* --- Main Container --- */
+.container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0 auto;
+	width: 1100px;
+	max-width: 90%;
+}
+/* ------ Sections ------ */
+/* --- Attributions --- */
+.attribution {
+	color: var(--Pry-DkBlackBlue);
+	position: absolute;
+	top: 8%;
+	font-size: 1em;
+}
+.attribution a {
+	color: white;
+	background: var(--Pry-DkBlackBlue);
+	padding: 0.5em;
+	margin: 5px;
+	border-radius: 0.5em;
+	text-decoration: none;
+}
+
+/* --- Testimonials Grid --- */
+.testimonials {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: auto auto;
+	grid-template-areas:
+		"Daniel		Daniel	Jonathan	Kira"
+		"Jeanette 	Patrick	Patrick 	Kira";
+	gap: 2.25em;
+}
+.single-test {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	padding: 2.5em;
+	border-radius: 0.75em;
+	box-shadow: 1em 1em 5em rgba(0, 0, 0, 0.2);
+}
+.profile-info {
+	height: 2.4em;
+	position: relative;
+	display: flex;
+	gap: 1.5em;
+}
+.content-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+	z-index: 1;
+}
+
+.names-verified {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+}
+/* Images */
+.profile-info > img {
+	height: 100%;
+	border-radius: 50%;
+}
+#pattern-bg {
+	position: absolute;
+	top: 0;
+	right: 15%;
+}
+/* Tests ID's */
+#Daniel {
+	grid-area: Daniel;
+	background: hsl(263, 55%, 52%);
+}
+#Jonathan {
+	grid-area: Jonathan;
+	background: hsl(217, 19%, 35%);
+}
+#Kira {
+	grid-area: Kira;
+	background: white;
+}
+#Jeanette {
+	grid-area: Jeanette;
+	background: white;
+}
+#Patrick {
+	grid-area: Patrick;
+	background: hsl(219, 29%, 14%);
+}
+
+/* --- Themes --- */
+.light-theme {
+	color: hsl(217, 19%, 35%);
+}
+.dark-theme {
+	color: white;
+}
+.dark-theme .content-text > h2 {
+	font-weight: 500;
+}
+.content-text > p {
+	opacity: 0.7;
+	/* text-align: justify; */ /* Original`s has left align but I think this option is better */
+	line-height: 1.4em;
+}
+.content-text > h2 {
+	margin: 0.75em 0;
+}
+.verified {
+	opacity: 0.5;
+}
