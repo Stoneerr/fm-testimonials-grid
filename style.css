@@ -45,7 +45,7 @@ h5 {
 .attribution {
 	color: var(--Pry-DkBlackBlue);
 	position: absolute;
-	top: 8%;
+	top: 7em;
 	font-size: 1em;
 }
 .attribution a {
@@ -154,4 +154,29 @@ h5 {
 
 .verified {
 	opacity: 0.5;
+}
+
+@media (max-width: 375px) {
+	body {
+		font-size: 12px;
+	}
+	.testimonials {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		grid-template-areas: "Daniel" "Jonathan" "Jeanette" "Patrick" "Kira";
+		gap: 1.8em;
+	}
+	.container {
+		height: 100%;
+		max-width: 100%;
+		padding: 6em 1.8em;
+	}
+	#pattern-bg {
+		right: 2em;
+	}
+	.attribution {
+		top: 2.5em;
+		font-size: 1em;
+	}
 }
